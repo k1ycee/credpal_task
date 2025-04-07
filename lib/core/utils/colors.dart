@@ -8,3 +8,5 @@ const textColorLight = Color(0xffB3B3CC);
 const nearBlack = Color(0xff33334D);
 const black = Color(0xff1A1A1A);
 const gray = Color(0xffC1C1CE);
+const white = Color(0xffFFFFFF);
+const productBackgroundColor = Color(0xffF1F3FE);
