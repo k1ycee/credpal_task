@@ -1,16 +1,16 @@
 # credpal_task
 
-A new Flutter project.
+Credpal Interview Task
 
-## Getting Started
+## Assumprtions
 
-This project is a starting point for a Flutter application.
+I assumed that the tasks goal is to see if I can make something similar to the original, I made this assumption because I noticed that some of the images are off, so I used images that would render and I did my best to write the code in such a way that it you wanted to increase or reduce the UI elements the code allowed for that.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### App Link
+You can find the downloadable apk [here](https://drive.google.com/file/d/1xowwHb12VmxeIY24hcuXAxklxfrBvotw/view?usp=sharing)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Video Walkthrough
+[![Shorts](https://img.youtube.com/vi/emPkuSjbozc/0.jpg)](https://youtube.com/shorts/emPkuSjbozc?feature=share)
