@@ -15,8 +15,33 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// Directory path: assets/images/png
+  $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
+
   /// Directory path: assets/images/svg
   $AssetsImagesSvgGen get svg => const $AssetsImagesSvgGen();
+}
+
+class $AssetsImagesPngGen {
+  const $AssetsImagesPngGen();
+
+  /// File path: assets/images/png/iphone12.png
+  AssetGenImage get iphone12 =>
+      const AssetGenImage('assets/images/png/iphone12.png');
+
+  /// File path: assets/images/png/iphonex.png
+  AssetGenImage get iphonex =>
+      const AssetGenImage('assets/images/png/iphonex.png');
+
+  /// File path: assets/images/png/nokia.png
+  AssetGenImage get nokia => const AssetGenImage('assets/images/png/nokia.png');
+
+  /// File path: assets/images/png/soundcore.png
+  AssetGenImage get soundcore =>
+      const AssetGenImage('assets/images/png/soundcore.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [iphone12, iphonex, nokia, soundcore];
 }
 
 class $AssetsImagesSvgGen {
@@ -40,13 +65,6 @@ class $AssetsImagesSvgGen {
   SvgGenImage get imatestores =>
       const SvgGenImage('assets/images/svg/imatestores.svg');
 
-  /// File path: assets/images/svg/iphone.svg
-  SvgGenImage get iphone => const SvgGenImage('assets/images/svg/iphone.svg');
-
-  /// File path: assets/images/svg/iphone12.svg
-  SvgGenImage get iphone12 =>
-      const SvgGenImage('assets/images/svg/iphone12.svg');
-
   /// File path: assets/images/svg/just_used.svg
   SvgGenImage get justUsed =>
       const SvgGenImage('assets/images/svg/just_used.svg');
@@ -54,9 +72,6 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/justrite.svg
   SvgGenImage get justrite =>
       const SvgGenImage('assets/images/svg/justrite.svg');
-
-  /// File path: assets/images/svg/nokia.svg
-  SvgGenImage get nokia => const SvgGenImage('assets/images/svg/nokia.svg');
 
   /// File path: assets/images/svg/ogabassey.svg
   SvgGenImage get ogabassey =>
@@ -68,6 +83,9 @@ class $AssetsImagesSvgGen {
 
   /// File path: assets/images/svg/orile.svg
   SvgGenImage get orile => const SvgGenImage('assets/images/svg/orile.svg');
+
+  /// File path: assets/images/svg/pay.svg
+  SvgGenImage get pay => const SvgGenImage('assets/images/svg/pay.svg');
 
   /// File path: assets/images/svg/pointek.svg
   SvgGenImage get pointek => const SvgGenImage('assets/images/svg/pointek.svg');
@@ -82,10 +100,6 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/slot.svg
   SvgGenImage get slot => const SvgGenImage('assets/images/svg/slot.svg');
 
-  /// File path: assets/images/svg/soundcore.svg
-  SvgGenImage get soundcore =>
-      const SvgGenImage('assets/images/svg/soundcore.svg');
-
   /// List of all assets
   List<SvgGenImage> get values => [
     notificationDot,
@@ -93,19 +107,16 @@ class $AssetsImagesSvgGen {
     dreamworks,
     hubmart,
     imatestores,
-    iphone,
-    iphone12,
     justUsed,
     justrite,
-    nokia,
     ogabassey,
     okayfones,
     orile,
+    pay,
     pointek,
     scan,
     searchNormal,
     slot,
-    soundcore,
   ];
 }
 
@@ -113,6 +124,76 @@ class CredpalAssets {
   const CredpalAssets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+}
+
+class AssetGenImage {
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
+
+  final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
+
+  Image image({
+    Key? key,
+    AssetBundle? bundle,
+    ImageFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? scale,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = true,
+    bool isAntiAlias = false,
+    String? package,
+    FilterQuality filterQuality = FilterQuality.medium,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
+    return Image.asset(
+      _assetName,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      semanticLabel: semanticLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
+      width: width,
+      height: height,
+      color: color,
+      opacity: opacity,
+      colorBlendMode: colorBlendMode,
+      fit: fit,
+      alignment: alignment,
+      repeat: repeat,
+      centerSlice: centerSlice,
+      matchTextDirection: matchTextDirection,
+      gaplessPlayback: gaplessPlayback,
+      isAntiAlias: isAntiAlias,
+      package: package,
+      filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
+    );
+  }
+
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }
 
 class SvgGenImage {
